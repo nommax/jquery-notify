@@ -111,6 +111,7 @@ $.extend($.ech.notify.instance.prototype, {
 		this.element.fadeTo(speed, 0).slideUp(speed, function(){
 			self._trigger("close");
 			self.isOpen = false;
+			self.element.remove();
 		});
 		
 		return this;
